@@ -1,0 +1,161 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/* General Body and Global Styles */
+body {
+    background-color: #000000;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Arial", sans-serif;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Reduced padding */
+    background-color: #002bb8;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px; /* Reduced margin */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px; /* Slightly reduced font size */
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow the container to fill available space */
+}
+
+/* Confirmation Box */
+.confirmation-box {
+    background-color: #fff;
+    padding: 30px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin: 0; /* Remove any default margin */
+    position: relative; /* Set relative positioning for better control */
+    top: -20px; /* Adjust position upward to hide extra space */
+}
+
+/* Success Icon */
+.success-icon {
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+h1 {
+    color: #4CAF50;
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.success-message {
+    font-size: 16px; /* Slightly reduced font size */
+    color: #4CAF50;
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.payment-details p {
+    font-size: 14px; /* Reduced font size */
+    margin: 5px 0; /* Reduced margin */
+}
+
+.payment-details span {
+    font-weight: bold;
+    color: #333;
+}
+
+.home-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px; /* Reduced margin */
+    transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+    background-color: #45a049;
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 15px; /* Reduced padding */
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    max-width: 300px;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px; /* Reduced margin */
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ff4040;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 15px; /* Reduced margin */
+    font-size: 12px; /* Reduced font size */
+    color: #aaa;
+}
+
+/* Social Media Icons */
+.social-media li {
+    display: inline;
+    margin-right: 5px; /* Reduced margin */
+}

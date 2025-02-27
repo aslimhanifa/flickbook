@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw; /* This should not be on the universal selector */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000000; /* Corrected the syntax */
+
+  background-size: cover; /* Ensure the background covers the entire viewport */
+  background-position: center; /* Center the background image */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #002bb8; /* Ensure header is visible */
+    color: white;
+    width: 100%; /* Ensure header takes full width */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #000000; /* Change hover color */
+}
+
+.movie-container {
+  margin: 20px 0;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.seat {
+  background-color: #444451;
+  height: 26px;
+  width: 32px;
+  margin: 3px;
+  font-size: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat.selected {
+  background-color: green;
+}
+
+.seat.sold {
+  background-color: #fff;
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+
+.seat:not(.sold):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .seat:not(.sold):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.showcase li small {
+  margin-left: 2px;
+}
+
+.row {
+  display: flex;
+}
+
+.screen {
+  background-color: #fff;
+  height: 120px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-48deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text{
+    margin: 5px 0;
+}
+
+p.text span{
+    color: rgb(158, 248, 158);
+}
+.date-picker label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.date-picker input[type="date"] {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Dates Section */
+.timings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.times {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the time items */
+  gap: 10px; /* Add space between time items */
+  margin-top: 10px;
+}
+
+.time {
+  font-size: 14px;
+  width: fit-content;
+  padding: 7px 14px;
+  background: #444451;
+  border-radius: 2mm;
+  cursor: pointer;
+}
+
+.timings input:checked + label {
+  background: green;
+  color: white;
+}
+
+/* Book Button Styles */
+.Book button {
+  background: green; /* Base background color */
+  color: white; /* Text color */
+  font-family: 'Poppins', sans-serif; /* Font family */
+  font-size: 18px; /* Font size */
+  padding: 12px 24px; /* Increased padding for better feel */
+  border-radius: 8px; /* Rounded corners */
+  outline: none; /* Remove outline */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Hover Effect */
+.Book button:hover {
+  background-color: rgb(30, 150, 30); /* Changed to a lighter green on hover for better visibility */
+  transform: scale(1.05); /* Slightly enlarge button */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increased shadow for depth */
+}
+
+/* Active Effect (when clicked) */
+.Book button:active {
+  transform: scale(0.95); /* Slightly shrink on click for feedback */
+  background-color: rgb(20, 100, 20); /* Darker background when active */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
+}
+
+/* Footer Section */
+footer {
+  background-color: #222; /* Dark background */
+  color: white; /* White text */
+  width: 100%; /* Full width */
+  padding: 40px; /* Set padding */
+  margin-top: 15px; /* Spacing from the content above */
+  text-align: center; /* Center align text for better presentation */
+  font-size: 16px; /* Font size for footer text */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border for separation */
+}
+
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center align items */
+}
+
+/* Footer Column */
+.footer-column {
+    max-width: 300px; /* Set max width for columns */
+}
+
+.footer-column h4 {
+    margin-bottom: 15px; /* Spacing below heading */
+}
+
+.footer-column ul {
+    list-style: none; /* No bullets for list */
+}
+
+.footer-column ul li {
+    margin-bottom: 10px; /* Spacing between list items */
+}
+
+.footer-column ul li a {
+    color: white; /* White text for links */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s; /* Smooth color change */
+}
+
+.footer-column ul li a:hover {
+    color: #ff4040; /* Change color on hover */
+}
+
+.social-media li {
+    display: inline; /* Inline for social media icons */
+    margin-right: 10px; /* Spacing between icons */
+}
+
+.footer-bottom {
+    text-align: center; /* Center text */
+    margin-top: 30px; /* Spacing above bottom text */
+    font-size: 14px; /* Font size */
+    color: #aaa; /* Light gray color */
+}
+.validation-messages {
+  margin: 10px 0;
+  font-weight: bold;
+  display: none; /* Hidden by default */
+}
